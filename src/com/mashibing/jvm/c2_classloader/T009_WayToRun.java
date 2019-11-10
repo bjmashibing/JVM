@@ -1,4 +1,4 @@
-package com.mashibing.jvm.classloader;
+package com.mashibing.jvm.c2_classloader;
 
 public class T009_WayToRun {
     public static void main(String[] args) {

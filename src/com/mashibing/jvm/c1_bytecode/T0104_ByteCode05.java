@@ -1,4 +1,4 @@
-package com.mashibing.jvm.bytecode;
+package com.mashibing.jvm.c1_bytecode;
 
 public class T0104_ByteCode05 {
     int i = 0;

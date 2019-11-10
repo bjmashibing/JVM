@@ -1,4 +1,4 @@
-package com.mashibing.jvm.bytecode;
+package com.mashibing.jvm.c1_bytecode;
 
 import java.io.Serializable;
 

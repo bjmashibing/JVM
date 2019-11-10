@@ -1,4 +1,4 @@
-package com.mashibing.jvm.classloader;
+package com.mashibing.jvm.c2_classloader;
 
 public class T001_ClassLoadingProcedure {
     public static void main(String[] args) {
@@ -7,8 +7,8 @@ public class T001_ClassLoadingProcedure {
 }
 
 class T {
-    public static int count = 2; //0
     public static T t = new T(); // null
+    public static int count = 2; //0
 
     //private int m = 8;
 

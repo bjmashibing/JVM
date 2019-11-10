@@ -1,4 +1,4 @@
-package com.mashibing.jvm.classloader;
+package com.mashibing.jvm.c2_classloader;
 
 public class T008_LazyLoading { //严格讲应该叫lazy initialzing，因为java虚拟机规范并没有严格规定什么时候必须loading,但严格规定了什么时候initialzing
     public static void main(String[] args) throws Exception {
@@ -6,7 +6,7 @@ public class T008_LazyLoading { //严格讲应该叫lazy initialzing，因为jav
         //X x = new X();
         //System.out.println(P.i);
         //System.out.println(P.j);
-        Class.forName("com.mashibing.jvm.classloader.T008_LazyLoading$P");
+        Class.forName("com.mashibing.jvm.c2_classloader.T008_LazyLoading$P");
 
     }
 

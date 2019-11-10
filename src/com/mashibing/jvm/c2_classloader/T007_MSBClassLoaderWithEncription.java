@@ -1,4 +1,4 @@
-package com.mashibing.jvm.classloader;
+package com.mashibing.jvm.c2_classloader;
 
 import com.mashibing.jvm.Hello;
 

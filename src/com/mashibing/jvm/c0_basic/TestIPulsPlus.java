@@ -1,4 +1,4 @@
-package com.mashibing.jvm.basic;
+package com.mashibing.jvm.c0_basic;
 
 public class TestIPulsPlus {
     public static void main(String[] args) {
