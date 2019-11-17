@@ -1,4 +1,4 @@
-package com.mashibing.jvm.jmm;
+package com.mashibing.jvm.c3_jmm;
 
 public class T02_PrintMemoryInfo {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.mashibing.jvm.jmm;
+package com.mashibing.jvm.c3_jmm;
 
 import com.mashibing.jvm.agent.ObjectSizeAgent;
 

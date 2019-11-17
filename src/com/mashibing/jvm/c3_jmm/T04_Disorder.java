@@ -1,4 +1,4 @@
-package com.mashibing.jvm.jmm;
+package com.mashibing.jvm.c3_jmm;
 
 public class T04_Disorder {
     private static int x = 0, y = 0;
