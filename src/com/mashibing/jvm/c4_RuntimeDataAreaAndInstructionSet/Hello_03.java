@@ -1,4 +1,4 @@
-package com.mashibing.jvm;
+package com.mashibing.jvm.c4_RuntimeDataAreaAndInstructionSet;
 
 public class Hello_03 {
     public static void main(String[] args) {

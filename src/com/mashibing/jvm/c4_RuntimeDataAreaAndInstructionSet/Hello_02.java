@@ -1,8 +1,9 @@
-package com.mashibing.jvm;
+package com.mashibing.jvm.c4_RuntimeDataAreaAndInstructionSet;
 
-public class Hello_01 {
+public class Hello_02 {
     public static void main(String[] args) {
-        int i = 100;
+        Hello_02 h = new Hello_02();
+        h.m1();
     }
 
     public void m1() {
