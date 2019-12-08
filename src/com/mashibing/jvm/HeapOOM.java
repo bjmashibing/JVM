@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * test heap out of memory
  *
- * Options: -verbose:gc -Xms20M -Xmx20M -XX:+PrintGCDetails -XX:+HeapDumpOnOutOfMemoryError
+ * Options: -verbose:c5_gc -Xms20M -Xmx20M -XX:+PrintGCDetails -XX:+HeapDumpOnOutOfMemoryError
  *
  */
 

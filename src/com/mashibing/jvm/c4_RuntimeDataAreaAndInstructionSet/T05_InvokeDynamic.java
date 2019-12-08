@@ -14,7 +14,7 @@ public class T05_InvokeDynamic {
         System.out.println(i2.getClass());
         System.out.println(i3.getClass());
 
-        for(;;) {I j = C::n;} //MethodArea <1.8 Perm Space (FGC不回收)
+        //for(;;) {I j = C::n;} //MethodArea <1.8 Perm Space (FGC不回收)
     }
 
     @FunctionalInterface

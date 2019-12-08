@@ -2,19 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96329429-90d8-4757-a4a3-7fdc61dce21a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/04_JavaRuntimeDataArea_InstructionSet.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T01_InvokeStatic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T02_InvokeVirtual.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T03_InvokeSpecial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T04_InvokeInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T05_InvokeDynamic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/LambdaGC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/interview/aboutobject/T01_ProcudureOfObjectCreation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/Hello_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/Hello_01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/Hello_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/Hello_02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/Hello_03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/Hello_03.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/Hello_04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/Hello_04.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/c0_basic/TestIPulsPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/TestIPulsPlus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/Hello_01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/Hello_02.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/Hello_03.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/Hello_04.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/TestTLAB$User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/TestTLAB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/c0_basic/T.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/c0_basic/T.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/c0_basic/TestIPulsPlus$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/c0_basic/TestIPulsPlus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T01_HelloGC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T02_CMS_Eden.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T03_CMS_Old.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T04_CMS_YGC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T05_CMS_FGC_1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T06_CMS_FGC_2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T07_CMS_FGC_3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T08_CMS_FGC_4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T09_CMS_FGC_5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T10_CMS_FGC_6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T11_Hello_G1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T12_G1_1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T13_G1_2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T14_G1_3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T15_FullGC_Problem01$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T15_FullGC_Problem01$CardInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JVM/com/mashibing/jvm/gc/T15_FullGC_Problem01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/HeapOOM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/HeapOOM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/TestTLAB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/TestTLAB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/c0_basic/T.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c0_basic/T.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T05_InvokeDynamic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T05_InvokeDynamic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/LambdaGC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/LambdaGC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T01_HelloGC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T01_HelloGC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T02_CMS_Eden.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T02_CMS_Eden.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T03_CMS_Old.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T03_CMS_Old.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T04_CMS_YGC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T04_CMS_YGC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T05_CMS_FGC_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T05_CMS_FGC_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T06_CMS_FGC_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T06_CMS_FGC_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T07_CMS_FGC_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T07_CMS_FGC_3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T08_CMS_FGC_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T08_CMS_FGC_4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T09_CMS_FGC_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T09_CMS_FGC_5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T10_CMS_FGC_6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T10_CMS_FGC_6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T11_Hello_G1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T11_Hello_G1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T12_G1_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T12_G1_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T13_G1_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T13_G1_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T14_G1_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T14_G1_3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mashibing/jvm/gc/T15_FullGC_Problem01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T15_FullGC_Problem01.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,83 +72,91 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/Hello_01.java">
+        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/ConstantPoolOOM.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/ExeModeCompVSMixed.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/HeapOOM.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/interview/aboutobject/T01_ProcudureOfObjectCreation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="e#138#139#0" expanded="true" />
+                <element signature="e#167#168#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/Hello.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#69#70#0" expanded="true" />
+                <element signature="e#117#118#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/StackOverFlow.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding>
-                <element signature="e#95#96#0" expanded="true" />
-                <element signature="e#122#123#0" expanded="true" />
-                <element signature="e#146#147#0" expanded="true" />
-                <element signature="e#173#174#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
-                <element signature="e#350#351#0" expanded="true" />
-                <element signature="e#374#375#0" expanded="true" />
-                <element signature="e#413#414#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T01_InvokeStatic.java">
+        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/TestGC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#139#140#0" expanded="true" />
-                <element signature="e#158#159#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T02_InvokeVirtual.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#140#141#0" expanded="true" />
-                <element signature="e#183#184#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T03_InvokeSpecial.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T04_InvokeInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#237#245#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="46">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T05_InvokeDynamic.java">
+        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/TestTLAB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+            <state relative-caret-position="46">
+              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+              <folding>
+                <element signature="e#362#363#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/Hello_02.java">
+        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/cms/Student.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -122,33 +165,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/Hello_03.java">
+        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/cms/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/Hello_04.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/04_JavaRuntimeDataArea_InstructionSet.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="188">
-                <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
-              </first_editor>
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
+            <state relative-caret-position="115">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -177,9 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/mashibing/jvm/bytecode/T0100_ByteCode02.java" />
-        <option value="$PROJECT_DIR$/src/com/mashibing/jvm/bytecode/T0100_ByteCode03.java" />
-        <option value="$PROJECT_DIR$/src/com/mashibing/jvm/bytecode/T0100_ByteCode04.java" />
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/bytecode/T0100_ByteCode_With_Interfaces.java" />
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/bytecode/T0101_ByteCode_With_Interfaces.java" />
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/bytecode/T0104_ByteCode05.java" />
@@ -216,7 +233,6 @@
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/c2_classloader/T010_Parent.java" />
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/c2_classloader/T002_ClassLoaderLevel.java" />
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/c2_classloader/T001_ClassLoadingProcedure.java" />
-        <option value="$PROJECT_DIR$/src/com/mashibing/jvm/c0_basic/T.java" />
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/jmm/TestVolatile.java" />
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/c3_jmm/TestSync.java" />
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/TestInvoke.java" />
@@ -224,18 +240,22 @@
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/TestInvokeVirtual.java" />
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/TestInvokeSpecial.java" />
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/TestInvokeInterface.java" />
-        <option value="$PROJECT_DIR$/src/com/mashibing/jvm/gc/LambdaGC.java" />
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/TestIPulsPlus.java" />
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T04_InvokeInterface.java" />
         <option value="$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T05_InvokeDynamic.java" />
+        <option value="$PROJECT_DIR$/src/com/mashibing/jvm/gc/LambdaGC.java" />
+        <option value="$PROJECT_DIR$/src/com/mashibing/jvm/c0_basic/T.java" />
+        <option value="$PROJECT_DIR$/src/com/mashibing/jvm/interview/aboutobject/T01_ProcudureOfObjectCreation.java" />
+        <option value="$PROJECT_DIR$/src/com/mashibing/jvm/TestTLAB.java" />
+        <option value="$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/TestTLAB.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="990" />
-    <option name="y" value="1003" />
-    <option name="width" value="1938" />
-    <option name="height" value="1088" />
+    <option name="x" value="1575" />
+    <option name="y" value="988" />
+    <option name="width" value="1931" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -245,6 +265,7 @@
     <panes>
       <pane id="NBKnowledgePane" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -268,14 +289,7 @@
               <item name="JVM" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="jvm" type="462c0819:PsiDirectoryNode" />
-              <item name="c0_basic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JVM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JVM" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="jvm" type="462c0819:PsiDirectoryNode" />
-              <item name="c4_RuntimeDataAreaAndInstructionSet" type="462c0819:PsiDirectoryNode" />
+              <item name="c5_gc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JVM" type="b2602c69:ProjectViewProjectNode" />
@@ -290,7 +304,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,7 +313,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="jvm" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -330,14 +343,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.T05_InvokeDynamic">
+  <component name="RunManager" selected="Application.TestTLAB">
     <configuration name="LambdaGC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mashibing.jvm.gc.LambdaGC" />
+      <option name="MAIN_CLASS_NAME" value="com.mashibing.jvm.c5_gc.LambdaGC" />
       <module name="JVM" />
-      <option name="VM_PARAMETERS" value="-XX:MaxMetaspaceSize=30M -XX:+PrintGCDetails" />
+      <option name="VM_PARAMETERS" value="-XX:MaxMetaspaceSize=9M -XX:+PrintGCDetails" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mashibing.jvm.gc.*" />
+          <option name="PATTERN" value="com.mashibing.jvm.c5_gc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -345,12 +358,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="T01_InvokeStatic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mashibing.jvm.c4_RuntimeDataAreaAndInstructionSet.T01_InvokeStatic" />
+    <configuration name="T" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mashibing.jvm.c0_basic.T" />
       <module name="JVM" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mashibing.jvm.c4_RuntimeDataAreaAndInstructionSet.*" />
+          <option name="PATTERN" value="com.mashibing.jvm.c0_basic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -358,12 +371,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="T02_InvokeVirtual" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mashibing.jvm.c4_RuntimeDataAreaAndInstructionSet.T02_InvokeVirtual" />
+    <configuration name="T01_ProcudureOfObjectCreation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mashibing.jvm.interview.aboutobject.T01_ProcudureOfObjectCreation" />
       <module name="JVM" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mashibing.jvm.c4_RuntimeDataAreaAndInstructionSet.*" />
+          <option name="PATTERN" value="com.mashibing.jvm.interview.aboutobject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="T03_SizeOfAnObject" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mashibing.jvm.c3_jmm.T03_SizeOfAnObject" />
+      <module name="JVM" />
+      <option name="VM_PARAMETERS" value="-javaagent:C:\work\ijprojects\ObjectSize\out\artifacts\ObjectSize_jar\ObjectSize.jar -XX:-UseCompressedClassPointers" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mashibing.jvm.c3_jmm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -384,12 +411,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestIPulsPlus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mashibing.jvm.c4_RuntimeDataAreaAndInstructionSet.TestIPulsPlus" />
+    <configuration name="TestTLAB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mashibing.jvm.c5_gc.TestTLAB" />
       <module name="JVM" />
+      <option name="VM_PARAMETERS" value="-XX:-DoEscapeAnalysis -XX:-EliminateAllocations -XX:-UseTLAB" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mashibing.jvm.c4_RuntimeDataAreaAndInstructionSet.*" />
+          <option name="PATTERN" value="com.mashibing.jvm.c5_gc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -398,19 +426,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.T05_InvokeDynamic" />
+      <item itemvalue="Application.T03_SizeOfAnObject" />
+      <item itemvalue="Application.T01_ProcudureOfObjectCreation" />
       <item itemvalue="Application.LambdaGC" />
-      <item itemvalue="Application.TestIPulsPlus" />
-      <item itemvalue="Application.T01_InvokeStatic" />
-      <item itemvalue="Application.T02_InvokeVirtual" />
+      <item itemvalue="Application.T05_InvokeDynamic" />
+      <item itemvalue="Application.T" />
+      <item itemvalue="Application.TestTLAB" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.T05_InvokeDynamic" />
-        <item itemvalue="Application.T02_InvokeVirtual" />
-        <item itemvalue="Application.T01_InvokeStatic" />
-        <item itemvalue="Application.TestIPulsPlus" />
+        <item itemvalue="Application.TestTLAB" />
+        <item itemvalue="Application.T01_ProcudureOfObjectCreation" />
+        <item itemvalue="Application.T" />
         <item itemvalue="Application.LambdaGC" />
+        <item itemvalue="Application.T05_InvokeDynamic" />
       </list>
     </recent_temporary>
   </component>
@@ -453,28 +482,36 @@
       <option name="project" value="LOCAL" />
       <updated>1573978371366</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="第五课">
+      <created>1574565250892</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574565250892</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="660" y="669" width="1292" height="725" extended-state="0" />
+    <frame x="1028" y="560" width="1287" height="728" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5014881" side_tool="true" weight="0.18470947" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.47386172" visible="true" weight="0.23581848" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.47386172" visible="true" weight="0.27013832" />
       <window_info id="Structure" order="3" sideWeight="0.5261383" side_tool="true" weight="0.30089214" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.3298351" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.32659933" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32969603" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.3288364" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32828283" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.26342282" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3998441" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" x="1173" y="155" width="662" height="372" id="jclasslib" order="0" weight="0.38249594" />
+      <window_info anchor="right" x="1173" y="155" width="662" height="372" id="jclasslib" order="0" weight="0.71231765" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
@@ -511,196 +548,10 @@
     <MESSAGE value="更新markdown资料与图片" />
     <MESSAGE value="ClassLoader" />
     <MESSAGE value="第四课" />
-    <option name="LAST_COMMIT_MESSAGE" value="第四课" />
+    <MESSAGE value="第五课" />
+    <option name="LAST_COMMIT_MESSAGE" value="第五课" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/ext/dnsns.jar!/sun/net/spi/nameservice/dns/DNSNameService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hello.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/StackOverFlow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/TestTLAB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding>
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/tools/SimpleJavaFileObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/tools/JavaCompiler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="220" column="17" selection-start-line="220" selection-start-column="17" selection-end-line="220" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/misc/Launcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="260" column="47" selection-start-line="260" selection-start-column="47" selection-end-line="260" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c2_classloader/T005_LoadClassByHand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="72" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/net/URLClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6923">
-          <caret line="355" column="23" selection-start-line="355" selection-start-column="23" selection-end-line="355" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c2_classloader/T009_WayToRun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/security/SecureClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c3_jmm/T02_PrintMemoryInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c3_jmm/TestHeapDump.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c2_classloader/T007_MSBClassLoaderWithEncription.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c2_classloader/T003_ClassLoaderScope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c2_classloader/T004_ParentAndChild.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c2_classloader/T008_LazyLoading.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c0_basic/TestIndentityHashCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="676" column="15" selection-start-line="676" selection-start-column="15" selection-end-line="676" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c2_classloader/T010_Parent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding>
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c2_classloader/T011_ClassReloading1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="13" column="72" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c0_basic/T.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding>
-            <element signature="e#97#98#0" expanded="true" />
-            <element signature="e#126#127#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03_01_JMM.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c2_classloader/T012_ClassReloading2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="35" column="61" selection-start-line="35" selection-start-column="61" selection-end-line="35" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/TestGC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.MD">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -728,18 +579,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="667">
             <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03_02_JavaAgent_AboutObject.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="115">
-            <caret line="54" column="3" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -800,27 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c3_jmm/T03_SizeOfAnObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/gc/T01_HelloGC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/gc/LambdaGC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c2_classloader/T001_ClassLoadingProcedure.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -828,17 +646,6 @@
           <folding>
             <element signature="e#128#129#0" expanded="true" />
             <element signature="e#171#172#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/Hello.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#69#70#0" expanded="true" />
-            <element signature="e#117#118#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -866,16 +673,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T01_InvokeStatic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
-            <element signature="e#95#96#0" expanded="true" />
-            <element signature="e#122#123#0" expanded="true" />
-            <element signature="e#146#147#0" expanded="true" />
-            <element signature="e#173#174#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#350#351#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#139#140#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T02_InvokeVirtual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#140#141#0" expanded="true" />
+            <element signature="e#183#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T03_InvokeSpecial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T04_InvokeInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T05_InvokeDynamic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -883,6 +726,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/LambdaGC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T15_FullGC_Problem01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c0_basic/T.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_01_JMM.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_02_JavaAgent_AboutObject.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1587">
+            <caret line="69" column="3" selection-start-line="69" selection-start-column="3" selection-end-line="69" selection-end-column="87" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
     </entry>
@@ -900,50 +789,190 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T01_InvokeStatic.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c3_jmm/T03_SizeOfAnObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#139#140#0" expanded="true" />
-            <element signature="e#158#159#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="161">
+          <caret line="7" column="57" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T02_InvokeVirtual.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T01_HelloGC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#140#141#0" expanded="true" />
-            <element signature="e#183#184#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="69">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T03_InvokeSpecial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T04_InvokeInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#237#245#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c4_RuntimeDataAreaAndInstructionSet/T05_InvokeDynamic.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T02_CMS_Eden.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T03_CMS_Old.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T04_CMS_YGC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T05_CMS_FGC_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T06_CMS_FGC_2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T07_CMS_FGC_3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T08_CMS_FGC_4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T09_CMS_FGC_5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T10_CMS_FGC_6.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T11_Hello_G1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T12_G1_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T13_G1_2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/T14_G1_3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/ConstantPoolOOM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/ExeModeCompVSMixed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/HeapOOM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/Hello.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#69#70#0" expanded="true" />
+            <element signature="e#117#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/StackOverFlow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/TestGC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/cms/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/cms/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/interview/aboutobject/T01_ProcudureOfObjectCreation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+            <element signature="e#167#168#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c5_gc/TestTLAB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1004,7 +1033,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
