@@ -42,7 +42,7 @@
    >
    > 除此之外不仅逻辑分代，而且物理分代
 
-2. 新生代 + 老年代 + 永久代（1.7）/ 元数据区(1.8) Metaspace
+2. 新生代 + 老年代 + 永久代（1.7）Perm Generation/ 元数据区(1.8) Metaspace
    1. 永久代 元数据 - Class
    2. 永久代必须指定大小限制 ，元数据可以设置，也可以不设置，无上限（受限于物理内存）
    3. 字符串常量 1.7 - 永久代，1.8 - 堆
@@ -72,6 +72,7 @@
 
 8. 分配担保：（不重要）
    YGC期间 survivor区空间不够了 空间担保直接进入老年代
+   参考：https://cloud.tencent.com/developer/article/1082730
 
 #### 5.常见的垃圾回收器
 
@@ -94,9 +95,9 @@
 8. G1(10ms)
    算法：三色标记 + SATB
 9. ZGC (1ms) PK C++
-   算法：ColoredPointers + 写屏障？
+   算法：ColoredPointers + LoadBarrier
 10. Shenandoah
-    算法：ColoredPointers + 读屏障?
+    算法：ColoredPointers + WriteBarrier
 11. Eplison
 12. PS 和 PN区别的延伸阅读：
     ▪[https://docs.oracle.com/en/java/javase/13/gctuning/ergonomics.html#GUID-3D0BB91E-9BFF-4EBB-B523-14493A860E73](https://docs.oracle.com/en/java/javase/13/gctuning/ergonomics.html)
@@ -105,9 +106,29 @@
     2. PS 上百兆 - 几个G
     3. CMS - 20G
     4. G1 - 上百G
-    5. ZGC - 4T
+    5. ZGC - 4T - 16T（JDK13）
 
 1.8默认的垃圾回收：PS + ParallelOld
+
+### 常见垃圾回收器组合参数设定：(1.8)
+
+* -XX:+UseSerialGC = Serial New (DefNew) + Serial Old
+  * 小型程序。默认情况下不会是这种选项，HotSpot会根据计算及配置和JDK版本自动选择收集器
+* -XX:+UseParNewGC = ParNew + SerialOld
+  * 这个组合已经很少用（在某些版本中已经废弃）
+  * https://stackoverflow.com/questions/34962257/why-remove-support-for-parnewserialold-anddefnewcms-in-the-future
+* -XX:+UseConc<font color=red>(urrent)</font>MarkSweepGC = ParNew + CMS + Serial Old
+* -XX:+UseParallelGC = Parallel Scavenge + Parallel Old (1.8默认) 【PS + SerialOld】
+* -XX:+UseParallelOldGC = Parallel Scavenge + Parallel Old
+* -XX:+UseG1GC = G1
+* Linux中没找到默认GC的查看方法，而windows中会打印UseParallelGC 
+  * java +XX:+PrintCommandLineFlags -version
+  * 通过GC的日志来分辨
+
+* Linux下1.8版本默认的垃圾回收器到底是什么？
+
+  * 1.8.0_181 默认（看不出来）Copy MarkCompact
+  * 1.8.0_222 默认 PS + PO
 
 ### JVM调优第一步，了解JVM常用命令行参数
 
@@ -147,13 +168,15 @@
 
   
 
-  1. java -XX:+PrintCommandLineFlags HelloGC
-  2. java -Xmn10M -Xms40M -Xmx60M -XX:+PrintCommandLineFlags -XX:PrintGC  HelloGC
-  3. java -XX:+UseConcMarkSweepGC -XX:+PrintCommandLineFlags HelloGC
-  4. java -XX:+PrintFlagsInitial 默认参数值
-  5. java -XX:+PrintFlagsFinal 最终参数值
-  6. java -XX:+PrintFlagsFinal | grep xxx 找到对应的参数
-  7. java -XX:+PrintFlagsFinal -version |grep GC
+  1. 区分概念：内存泄漏memory leak，内存溢出out of memory
+  2. java -XX:+PrintCommandLineFlags HelloGC
+  3. java -Xmn10M -Xms40M -Xmx60M -XX:+PrintCommandLineFlags -XX:+PrintGC  HelloGC
+     PrintGCDetails PrintGCTimeStamps PrintGCCauses
+  4. java -XX:+UseConcMarkSweepGC -XX:+PrintCommandLineFlags HelloGC
+  5. java -XX:+PrintFlagsInitial 默认参数值
+  6. java -XX:+PrintFlagsFinal 最终参数值
+  7. java -XX:+PrintFlagsFinal | grep xxx 找到对应的参数
+  8. java -XX:+PrintFlagsFinal -version |grep GC
 
 ### PS GC日志详解
 
@@ -170,38 +193,34 @@ eden space 5632K, 94% used [0x00000000ff980000,0x00000000ffeb3e28,0x00000000fff0
                             后面的内存地址指的是，起始地址，使用空间结束地址，整体空间结束地址
 ```
 
-### 常见垃圾回收器组合参数设定：(1.8)
+![GCHeapDump](GCHeapDump.png)
 
-* -XX:+UseSerialGC = Serial New (DefNew) + Serial Old
-  * 小型程序。默认情况下不会是这种选项，HotSpot会根据计算及配置和JDK版本自动选择收集器
-* -XX:+UseParNewGC = ParNew + SerialOld
-  * 这个组合已经很少用（在某些版本中已经废弃）
-  * https://stackoverflow.com/questions/34962257/why-remove-support-for-parnewserialold-anddefnewcms-in-the-future
-* UseConc<font color=red>(urrent)</font>MarkSweepGC = ParNew + CMS + Serial Old
-* UseParallelGC = Parallel Scavenge + Parallel Old (1.8默认) 【PS + SerialOld】
-* UseParallelOldGC = Parallel Scavenge + Parallel Old
-* UseG1GC = G1
-* Linux中没找到默认GC的查看方法，而windows中会打印UseParallelGC 
-  * java +XX:+PrintCommandLineFlags -version
-  * 通过GC的日志来分辨
+total = eden + 1个survivor
 
-* Linux下1.8版本默认的垃圾回收器到底是什么？
+### 调优前的基础概念：
 
-  * 1.8.0_181 默认（看不出来）Copy MarkCompact
-  * 1.8.0_222 默认 PS + PO
+1. 吞吐量：用户代码时间 /（用户代码执行时间 + 垃圾回收时间）
+2. 响应时间：STW越短，响应时间越好
+
+所谓调优，首先确定，追求啥？吞吐量优先，还是响应时间优先？还是在满足一定的响应时间的情况下，要求达到多大的吞吐量...
+
+问题：
+
+科学计算，吞吐量。数据挖掘，thrput。吞吐量优先的一般：（PS + PO）
+
+响应时间：网站 GUI API （1.8 G1）
 
 ### 什么是调优？
 
 1. 根据需求进行JVM规划和预调优
-2. 优化运行JVM运行环境
-3. 解决JVM运行过程中出现的各种问题
+2. 优化运行JVM运行环境（慢，卡顿）
+3. 解决JVM运行过程中出现的各种问题(OOM)
 
 ### 调优，从规划开始
 
 * 调优，从业务场景开始，没有业务场景的调优都是耍流氓
-  压测
   
-* 无监控，不调优
+* 无监控（压力测试，能看到结果），不调优
 
 * 步骤：
   1. 熟悉业务场景（没有最好的垃圾回收器，只有最合适的垃圾回收器）
@@ -209,21 +228,26 @@ eden space 5632K, 94% used [0x00000000ff980000,0x00000000ffeb3e28,0x00000000fff0
      2. 吞吐量 = 用户时间 /( 用户时间 + GC时间) [PS]
   2. 选择回收器组合
   3. 计算内存需求（经验值 1.5G 16G）
-  4. 设定年代大小、升级年龄
-  5. 设定日志参数
+  4. 选定CPU（越高越好）
+  5. 设定年代大小、升级年龄
+  6. 设定日志参数
      1. -Xloggc:/opt/xxx/logs/xxx-xxx-gc-%t.log -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=20M -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCCause
      2. 或者每天产生一个日志文件
-  6. 观察日志情况
+  7. 观察日志情况
   
 * 案例1：垂直电商，最高每日百万订单，处理订单系统需要什么样的服务器配置？
 
   > 这个问题比较业余，因为很多不同的服务器配置都能支撑(1.5G 16G)
   >
-  > 1小时360000集中时间段， 100个订单/秒
+  > 1小时360000集中时间段， 100个订单/秒，（找一小时内的高峰期，1000订单/秒）
   >
   > 经验值，
   >
+  > 非要计算：一个订单产生需要多少内存？512K * 1000 500M内存
+  >
   > 专业一点儿问法：要求响应时间100ms
+  >
+  > 压测！
 
 * 案例2：12306遭遇春节大规模抢票应该如何支撑？
 
@@ -231,7 +255,7 @@ eden space 5632K, 94% used [0x00000000ff980000,0x00000000ffeb3e28,0x00000000fff0
   >
   > 号称并发量100W最高
   >
-  > CDN -> LVS -> NGINX -> 业务系统 -> 每台机器1W并发 100台机器
+  > CDN -> LVS -> NGINX -> 业务系统 -> 每台机器1W并发（10K问题） 100台机器
   >
   > 普通电商订单 -> 下单 ->订单系统（IO）减库存 ->等待用户付款
   >
@@ -240,6 +264,8 @@ eden space 5632K, 94% used [0x00000000ff980000,0x00000000ffeb3e28,0x00000000fff0
   > 减库存最后还会把压力压到一台服务器
   >
   > 可以做分布式本地库存 + 单独服务器做库存均衡
+  >
+  > 大流量的处理方法：分而治之
 
 * 怎么得到一个事务会消耗多少内存？
 
@@ -252,9 +278,23 @@ eden space 5632K, 94% used [0x00000000ff980000,0x00000000ffeb3e28,0x00000000fff0
 1. 有一个50万PV的资料类网站（从磁盘提取文档到内存）原服务器32位，1.5G
    的堆，用户反馈网站比较缓慢，因此公司决定升级，新的服务器为64位，16G
    的堆内存，结果用户反馈卡顿十分严重，反而比以前效率更低了
-   为什么？
-   如何优化？
-2. 系统CPU经常100%，如何调优？
+   1. 为什么原网站慢?
+      很多用户浏览数据，很多数据load到内存，内存不足，频繁GC，STW长，响应时间变慢
+   2. 为什么会更卡顿？
+      内存越大，FGC时间越长
+   3. 咋办？
+      PS -> PN + CMS 或者 G1
+2. 系统CPU经常100%，如何调优？(面试高频)
+   CPU100%那么一定有线程在占用系统资源，
+   1. 找出哪个进程cpu高（top）
+   2. 该进程中的哪个线程cpu高（top -Hp）
+   3. 导出该线程的堆栈 (jstack)
+   4. 查找哪个方法（栈帧）消耗时间 (jstack)
+3. 系统内存飙高，如何查找问题？（面试高频）
+   1. 导出堆内存 (jmap)
+   2. 分析 (jhat jvisualvm mat jprofiler ... )
+4. 如何监控JVM
+   1. jstat jvisualvm jprofiler arthas top...
 
 ### 解决JVM运行中的问题
 
@@ -484,7 +524,10 @@ eden space 5632K, 94% used [0x00000000ff980000,0x00000000ffeb3e28,0x00000000fff0
    }
    ```
 
-9. 
+9. 重写finalize引发频繁GC
+   小米云，HBase同步系统，系统通过nginx访问超时报警，最后排查，C++程序员重写finalize引发频繁GC问题
+
+10. 如果有一个系统，内存一直消耗不超过10%，但是观察GC日志，发现FGC总是频繁产生，会是什么引起的？
 
 #### 作业
 
@@ -568,4 +611,10 @@ eden space 5632K, 94% used [0x00000000ff980000,0x00000000ffeb3e28,0x00000000fff0
     3. jmap -clstats pid
 
 ### ParallelGC常用参数
+
+### CMS常用参数
+
+### G1常用参数
+
+
 
