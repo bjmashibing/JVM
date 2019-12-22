@@ -23,14 +23,14 @@
 
 #### 2.如何定位垃圾
 
-1. 引用计数
-2. 根可达算法
+1. 引用计数（ReferenceCount）
+2. 根可达算法(RootSearching)
 
 #### 3.常见的垃圾回收算法
 
-1. 标记清除 - 位置不连续 产生碎片 效率偏低（两遍扫描）
-2. 拷贝算法 - 没有碎片，浪费空间
-3. 标记压缩 - 没有碎片，效率偏低（两遍扫描，指针需要调整）
+1. 标记清除(mark sweep) - 位置不连续 产生碎片 效率偏低（两遍扫描）
+2. 拷贝算法 (copying) - 没有碎片，浪费空间
+3. 标记压缩(mark compact) - 没有碎片，效率偏低（两遍扫描，指针需要调整）
 
 #### 4.JVM内存分代模型（用于分代垃圾回收算法）
 
@@ -290,6 +290,7 @@ total = eden + 1个survivor
    2. 该进程中的哪个线程cpu高（top -Hp）
    3. 导出该线程的堆栈 (jstack)
    4. 查找哪个方法（栈帧）消耗时间 (jstack)
+   5. 工作线程占比高 | 垃圾回收线程占比高
 3. 系统内存飙高，如何查找问题？（面试高频）
    1. 导出堆内存 (jmap)
    2. 分析 (jhat jvisualvm mat jprofiler ... )
@@ -366,27 +367,48 @@ total = eden + 1个survivor
    
    ```
 
-2. java -Xms200M -Xmx200M com.mashibing.jvm.gc.T15_FullGC_Problem01
+2. java -Xms200M -Xmx200M -XX:+PrintGC com.mashibing.jvm.gc.T15_FullGC_Problem01
 
-3. top命令观察到问题：内存不断增长 CPU占用率居高不下
+3. 一般是运维团队首先受到报警信息（CPU Memory）
 
-4. jps定位具体java进程
+4. top命令观察到问题：内存不断增长 CPU占用率居高不下
 
-5. jinfo pid 
+5. top -Hp 观察进程中的线程，哪个线程CPU和内存占比高
 
-6. jstat -gc 动态观察gc情况 / 阅读GC日志发现频繁GC / arthas观察 / jconsole
+6. jps定位具体java进程
+   jstack 定位线程状况，重点关注：WAITING BLOCKED
+   eg.
+   waiting on <0x0000000088ca3310> (a java.lang.Object)
+   假如有一个进程中100个线程，很多线程都在waiting on <xx> ，一定要找到是哪个线程持有这把锁
+   怎么找？搜索jstack dump的信息，找<xx> ，看哪个线程持有这把锁RUNNABLE
+   作业：1：写一个死锁程序，用jstack观察 2 ：写一个程序，一个线程持有锁不释放，其他线程等待
+
+7. 为什么阿里规范里规定，线程的名称（尤其是线程池）都要写有意义的名称
+   怎么样自定义线程池里的线程名称？（自定义ThreadFactory）
+
+8. jinfo pid 
+
+9. jstat -gc 动态观察gc情况 / 阅读GC日志发现频繁GC / arthas观察 / jconsole/jvisualVM/ Jprofiler（最好用）
    jstat -gc 4655 500 : 每个500个毫秒打印GC的情况
+   如果面试官问你是怎么定位OOM问题的？如果你回答用图形界面（错误）
+   1：已经上线的系统不用图形界面用什么？（cmdline arthas）
+   2：图形界面到底用在什么地方？测试！测试的时候进行监控！（压测观察）
 
-7. jmap - histo 4655 | head -20，查找有多少对象产生
+10. jmap - histo 4655 | head -20，查找有多少对象产生
 
-8. jmap -dump:format=b,file=xxx pid / jmap -histo
+11. jmap -dump:format=b,file=xxx pid ：
 
-9. java -Xms20M -Xmx20M -XX:+UseParallelGC -XX:+HeapDumpOnOutOfMemoryError com.mashibing.jvm.gc.T15_FullGC_Problem01
+    线上系统，内存特别大，jmap执行期间会对进程产生很大影响，甚至卡顿（电商不适合）
+    1：设定了参数HeapDump，OOM的时候会自动产生堆转储文件
+    2：<font color='red'>很多服务器备份（高可用），停掉这台服务器对其他服务器不影响</font>
+    3：在线定位(一般小点儿公司用不到)
 
-10. 使用MAT / jhat进行dump文件分析
+12. java -Xms20M -Xmx20M -XX:+UseParallelGC -XX:+HeapDumpOnOutOfMemoryError com.mashibing.jvm.gc.T15_FullGC_Problem01
+
+13. 使用MAT / jhat进行dump文件分析
      https://www.cnblogs.com/baihuitestsoftware/articles/6406271.html 
 
-11. 找到代码的问题
+14. 找到代码的问题
 
 #### jconsole远程连接
 
