@@ -405,9 +405,13 @@ total = eden + 1个survivor
 
 12. java -Xms20M -Xmx20M -XX:+UseParallelGC -XX:+HeapDumpOnOutOfMemoryError com.mashibing.jvm.gc.T15_FullGC_Problem01
 
-13. 使用MAT / jhat进行dump文件分析
+13. 使用MAT / jhat /jvisualvm 进行dump文件分析
      https://www.cnblogs.com/baihuitestsoftware/articles/6406271.html 
-
+jhat -J-mx512M xxx.dump
+    http://192.168.17.11:7000
+    拉到最后：找到对应链接
+    可以使用OQL查找特定问题对象
+    
 14. 找到代码的问题
 
 #### jconsole远程连接
@@ -444,6 +448,26 @@ total = eden + 1个survivor
 
 * 为什么需要在线排查？
    在生产上我们经常会碰到一些不好排查的问题，例如线程安全问题，用最简单的threaddump或者heapdump不好查到问题原因。为了排查这些问题，有时我们会临时加一些日志，比如在一些关键的函数里打印出入参，然后重新打包发布，如果打了日志还是没找到问题，继续加日志，重新打包发布。对于上线流程复杂而且审核比较严的公司，从改代码到上线需要层层的流转，会大大影响问题排查的进度。 
+* jvm观察jvm信息
+* thread定位线程问题
+* dashboard 观察系统情况
+* heapdump + jhat分析
+* jad反编译
+   动态代理生成类的问题定位
+   第三方的类（观察代码）
+   版本问题（确定自己最新提交的版本是不是被使用）
+* redefine 热替换
+   目前有些限制条件：只能改方法实现（方法已经运行完成），不能改方法名， 不能改属性
+   m() -> mm()
+* sc  - search class
+* watch  - watch method
+* 没有包含的功能：jmap
+
+### GC算法的基础概念
+
+* Card Table
+  由于做YGC时，需要扫描整个OLD区，效率非常低，所以JVM设计了CardTable， 如果一个OLD区CardTable中有对象指向Y区，就将它设为Dirty，下次扫描时，只需要扫描Dirty Card
+  在结构上，Card Table用BitMap来实现
 
 ### CMS
 
@@ -467,17 +491,27 @@ total = eden + 1个survivor
    >
    > –XX:CMSInitiatingOccupancyFraction 92% 可以降低这个值，让CMS保持老年代足够的空间
 
+### G1
+
+1. ▪https://www.oracle.com/technical-resources/articles/java/g1gc.html
+
 ### 案例汇总
+
+OOM产生的原因多种多样，有些程序未必产生OOM，不断FGC(CPU飙高，但内存回收特别少) （上面案例）
 
 1. 硬件升级系统反而卡顿的问题（见上）
 
 2. 线程池不当运用产生OOM问题（见上）
+   不断的往List里加对象（实在太LOW）
 
 3. smile jira问题
+   实际系统不断重启
+   解决问题 加内存 + 更换垃圾回收器 G1
+   真正问题在哪儿？不知道
 
-4. tomcat http-header-size过大问题
+4. tomcat http-header-size过大问题（Hector）
 
-5. lambda表达式导致方法区溢出问题
+5. lambda表达式导致方法区溢出问题(MethodArea / Perm Metaspace)
    LambdaGC.java     -XX:MaxMetaspaceSize=9M -XX:+PrintGCDetails
 
    ```java
@@ -537,6 +571,7 @@ total = eden + 1个survivor
    Object o = null;
    for(int i=0; i<100; i++) {
        o = new Object();
+       //业务处理
    }
    ```
 
@@ -548,8 +583,19 @@ total = eden + 1个survivor
 
 9. 重写finalize引发频繁GC
    小米云，HBase同步系统，系统通过nginx访问超时报警，最后排查，C++程序员重写finalize引发频繁GC问题
-
+为什么C++程序员会重写finalize？（new delete）
+   finalize耗时比较长（200ms）
+   
 10. 如果有一个系统，内存一直消耗不超过10%，但是观察GC日志，发现FGC总是频繁产生，会是什么引起的？
+    System.gc() (这个比较Low)
+
+11. Distuptor有个可以设置链的长度，如果过大，然后对象大，消费完不主动释放，会溢出 (来自 死物风情)
+
+12. 用jvm都会溢出，mycat用崩过，1.6.5某个临时版本解析sql子查询算法有问题，9个exists的联合sql就导致生成几百万的对象（来自 死物风情）
+
+13. new 大量线程，会产生 native thread OOM，（low）应该用线程池，
+    解决方案：减少堆空间（太TMlow了）,预留更多内存产生native thread
+    JVM内存占物理内存比例 50% - 80%
 
 #### 作业
 
@@ -606,6 +652,7 @@ total = eden + 1个survivor
 
      1. 扩内存
      2. 提高CPU性能（回收的快，业务逻辑产生对象的速度固定，垃圾回收越快，内存空间越大）
+      3. 降低MixedGC触发的阈值，让MixedGC提早发生（默认是45%）
     
  18. 问：生产环境中能够随随便便的dump吗？
      小堆影响不大，大堆会有服务暂停或卡顿（加live可以缓解），dump前会有FGC
@@ -632,11 +679,63 @@ total = eden + 1个survivor
     2. jmap -histo pid
     3. jmap -clstats pid
 
-### ParallelGC常用参数
+### GC常用参数
+
+* -Xmn -Xms -Xmx -Xss
+* -XX:+UseTLAB
+* -XX:+PrintTLAB
+* -XX:TLABSize
+* -XX:+ResizeTLAB
+* -XX:+DisableExplictGC
+  System.gc()不管用
+* -XX:+PrintGC
+* -XX:+PrintGCDetails
+* -XX:+PrintHeapAtGC
+* -XX:+PrintGCTimeStamps
+* -XX:+PrintGCApplicationConcurrentTime
+* -XX:+PrintGCApplicationStoppedTime
+* -XX:+PrintReferenceGC
+* -verbose:class
+* -XX:+PrintVMOptions
+* -XX:+PrintFlagsFinal
+* -Xloggc:opt/log/gc.log
+* 锁自旋次数 -XX:PreBlockSpin 热点代码检测参数-XX:CompileThreshold 逃逸分析 标量替换 ... 
+  这些不建议设置
+
+### Parallel常用参数
+
+* -XX:+UseSerialGC
+* -XX:SurvivorRatio
+* -XX:PreTenureSizeThreshold
+* -XX:MaxTenuringThreshold
+
+* -XX:+ParallelGCThreads
+* -XX:MaxGCPauseMillis
+* -XX:+UseAdaptiveSizePolicy
 
 ### CMS常用参数
 
+* -XX:+UseConcMarkSweepGC
+* -XX:ParallelCMSThreads
+* -XX:CMSInitiatingOccupancyFraction
+* -XX:+UseCMSCompactAtFullCollection
+* -XX:CMSFullGCsBeforeCompaction
+* -XX:+CMSClassUnloadingEnabled
+* -XX:CMSInitiatingPermOccupancyFraction
+* -XX:UseCMSInitiatingOccupancyOnly
+* GCTimeRatio
+* 
+
 ### G1常用参数
+
+* -XX:+UseG1GC
+* -XX:MaxGCPauseMillis
+* -XX:GCPauseIntervalMillis
+* -XX:+G1HeapRegionSize
+* G1ReservePercent
+* G1NewSizePercent
+* G1MaxNewSizePercent
+* GCTimeRatio
 
 
 
