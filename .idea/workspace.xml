@@ -66,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/../ObjectSize/out/artifacts/ObjectSize_jar/ObjectSize.jar!/com/mashibing/jvm/agent/ObjectSizeAgent.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
@@ -75,11 +75,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/05_GC and Tuning.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor>
+                <folding>
+                  <element signature="imports" expanded="true" />
+                </folding>
+              </first_editor>
               <second_editor>
                 <markdownNavigatorState />
               </second_editor>
@@ -193,8 +197,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1627" />
-    <option name="y" value="862" />
+    <option name="x" value="1626" />
+    <option name="y" value="861" />
     <option name="width" value="1938" />
     <option name="height" value="1137" />
   </component>
@@ -203,7 +207,22 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="JVM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JVM" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="NBKnowledgePane" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
@@ -409,16 +428,23 @@
       <option name="project" value="LOCAL" />
       <updated>1577020821757</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="第十课">
+      <created>1578712891871</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1578712891871</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="544" y="384" width="1292" height="758" extended-state="0" />
+    <frame x="1084" y="574" width="1292" height="758" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5014881" side_tool="true" weight="0.18470947" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.47386172" weight="0.23014587" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.47386172" visible="true" weight="0.23419774" />
       <window_info id="Structure" order="3" sideWeight="0.5261383" side_tool="true" weight="0.30089214" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.3298351" />
@@ -471,7 +497,8 @@
     <MESSAGE value="第五课" />
     <MESSAGE value="第七课" />
     <MESSAGE value="第八课" />
-    <option name="LAST_COMMIT_MESSAGE" value="第八课" />
+    <MESSAGE value="第十课" />
+    <option name="LAST_COMMIT_MESSAGE" value="第十课" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c3_jmm/TestVolatile.java">
@@ -756,6 +783,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c3_jmm/T04_Disorder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="26" selection-end-line="47" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c3_jmm/T03_SizeOfAnObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -789,13 +823,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05_GC and Tuning.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
+    <entry file="jar://$PROJECT_DIR$/../ObjectSize/out/artifacts/ObjectSize_jar/ObjectSize.jar!/com/mashibing/jvm/agent/ObjectSizeAgent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -820,17 +851,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mashibing/jvm/c3_jmm/T04_Disorder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="26" selection-end-line="47" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../ObjectSize/out/artifacts/ObjectSize_jar/ObjectSize.jar!/com/mashibing/jvm/agent/ObjectSizeAgent.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="29" />
+    <entry file="file://$PROJECT_DIR$/05_GC and Tuning.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <folding>
+              <element signature="imports" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
     </entry>
