@@ -7,6 +7,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
+/**
+ * 自定义classloader 并加密，防止别人反编译
+ */
 public class T007_MSBClassLoaderWithEncription extends ClassLoader {
 
     public static int seed = 0B10110110;

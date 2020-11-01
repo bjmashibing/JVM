@@ -1,12 +1,12 @@
 package com.mashibing.jvm.c3_jmm;
 
-import com.mashibing.jvm.agent.ObjectSizeAgent;
+//import com.mashibing.jvm.agent.ObjectSizeAgent;
 
 public class T03_SizeOfAnObject {
     public static void main(String[] args) {
-        System.out.println(ObjectSizeAgent.sizeOf(new Object()));
-        System.out.println(ObjectSizeAgent.sizeOf(new int[] {}));
-        System.out.println(ObjectSizeAgent.sizeOf(new P()));
+//        System.out.println(ObjectSizeAgent.sizeOf(new Object()));
+//        System.out.println(ObjectSizeAgent.sizeOf(new int[] {}));
+//        System.out.println(ObjectSizeAgent.sizeOf(new P()));
     }
 
     //一个Object占多少个字节

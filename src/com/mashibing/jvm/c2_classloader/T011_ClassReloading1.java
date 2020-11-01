@@ -1,5 +1,8 @@
 package com.mashibing.jvm.c2_classloader;
 
+/**
+ * 本类并未破坏双亲委派
+ */
 public class T011_ClassReloading1 {
     public static void main(String[] args) throws Exception {
         T006_MSBClassLoader msbClassLoader = new T006_MSBClassLoader();

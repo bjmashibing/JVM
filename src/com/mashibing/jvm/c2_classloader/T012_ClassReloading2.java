@@ -1,20 +1,24 @@
 package com.mashibing.jvm.c2_classloader;
 
-import com.mashibing.jvm.Hello;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URISyntaxException;
+import java.net.URL;
 
+/**
+ * 本类破坏了双亲委派模型
+ * 打破双亲委派，只能重写loadclass
+ */
 public class T012_ClassReloading2 {
     private static class MyLoader extends ClassLoader {
         @Override
         public Class<?> loadClass(String name) throws ClassNotFoundException {
-
-            File f = new File("C:/work/ijprojects/JVM/out/production/JVM/" + name.replace(".", "/").concat(".class"));
-
-            if(!f.exists()) return super.loadClass(name);
+            String filePath = getCurrentClassPath() + File.separator + name.replaceAll("\\.", File.separator).concat(".class");
+            File f = new File(filePath);
+            if (!f.exists()) return super.loadClass(name);
 
             try {
 
@@ -32,12 +36,24 @@ public class T012_ClassReloading2 {
     }
 
     public static void main(String[] args) throws Exception {
+        String name = "com.mashibing.jvm.Hello";
         MyLoader m = new MyLoader();
-        Class clazz = m.loadClass("com.mashibing.jvm.Hello");
+        Class clazz = m.loadClass(name);
 
         m = new MyLoader();
-        Class clazzNew = m.loadClass("com.mashibing.jvm.Hello");
+        Class clazzNew = m.loadClass(name);
 
         System.out.println(clazz == clazzNew);
+    }
+
+    private static String getCurrentClassPath() {
+        URL url = T012_ClassReloading2.class.getClassLoader().getResource("");
+        File f = null;
+        try {
+            f = new File(url.toURI());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        return f.getPath();
     }
 }
